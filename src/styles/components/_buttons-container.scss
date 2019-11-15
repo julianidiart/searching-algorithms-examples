@@ -1,0 +1,35 @@
+.buttons-container {
+  display: flex;
+  justify-content: center;
+}
+
+.buttons-container--configuration {
+  align-items: center;
+  padding: $s-size;
+}
+
+.buttons-container--configuration input {
+  color: $primary-color;
+  font-size: $m-size;
+  height: 44px;
+  margin: 0 8px;
+  text-align: center;
+}
+
+.buttons-container--configuration input:disabled {
+  color: black;
+}
+
+.buttons-container--configuration input:focus {
+  outline: 0;
+}
+
+.buttons-container--configuration input::-webkit-outer-spin-button,
+.buttons-container--configuration input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.buttons-container--configuration input[type="number"] {
+  -moz-appearance: textfield;
+}

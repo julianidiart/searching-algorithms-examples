@@ -1,0 +1,30 @@
+.data-container--dragging:last-child {
+  border-right: 0;
+}
+
+.item {
+  background-color: $secondary-color;
+  border: 2px solid $primary-color;
+  margin: 1px;
+  padding: 0 6px;
+  text-align: center;
+  min-width: 44px;
+  width: auto;
+}
+
+.item--dragging {
+  background: lighten($secondary-color, 10%);
+  border: 2px dashed $tertiary-color !important;
+  color: $tertiary-color;
+}
+
+.item--config {
+  background: none;
+  border: 0;
+  color: $primary-color;
+  font-size: $m-size;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: center;
+  text-decoration: underline;
+}
