@@ -31,7 +31,7 @@ const ButtonsContainer = () => {
         </button>
         <button
           className="button"
-          // onClick={context.handleBinarySearch}
+          onClick={context.handleBinarySearch}
           disabled={!context.sorted || context.searching}
         >
           Binary search

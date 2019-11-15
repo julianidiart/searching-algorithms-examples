@@ -1,5 +1,6 @@
 import React, { createContext, useState, useEffect } from "react";
 import linearSearch from "../searchingAlgorithms/linearSearch";
+import binarySearch from "../searchingAlgorithms/binarySearch";
 
 const Context = createContext([]);
 export const NumbersStore = props => {
@@ -74,6 +75,11 @@ export const NumbersStore = props => {
     const linearSearchAnimations = linearSearch(numbers, valueToSearch);
     performAnimations(linearSearchAnimations);
   };
+  const handleBinarySearch = () => {
+    const binarySearchAnimations = binarySearch(numbers, valueToSearch);
+    console.log(binarySearchAnimations);
+    performAnimations(binarySearchAnimations);
+  };
   const performAnimations = animations => {
     setSearching(true);
     animations.forEach((animation, index) => {
@@ -100,6 +106,7 @@ export const NumbersStore = props => {
     <Context.Provider
       value={{
         generateRandomNumbers,
+        handleBinarySearch,
         handleLinearSearch,
         handleSort,
         numbers,
