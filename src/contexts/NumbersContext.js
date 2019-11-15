@@ -46,15 +46,15 @@ export const NumbersStore = props => {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
   };
+  const onChangeValueToSearch = ({ target }) => {
+    if (+target.value > 99) setValueToSearch(99);
+    else if (+target.value < 0 || target.value === "") setValueToSearch(0);
+    else setValueToSearch(target.value);
+  };
   const onChangeQuantity = ({ target }) => {
     if (+target.value > 99) setQuantity(99);
     else if (+target.value < 2) setQuantity(2);
     else setQuantity(target.value);
-  };
-  const onChangeValueToSearch = ({ target }) => {
-    if (+target.value > 99) setValueToSearch(99);
-    else if (+target.value < 0) setValueToSearch(0);
-    else setValueToSearch(target.value);
   };
   return (
     <Context.Provider
