@@ -110,6 +110,7 @@ export const NumbersStore = props => {
         searching,
         setNumbers,
         sorted,
+        speed,
         valueToSearch
       }}
     >

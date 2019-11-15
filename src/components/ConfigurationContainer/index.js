@@ -27,7 +27,18 @@ const ConfigurationContainer = () => {
         type="number"
         value={context.quantity}
       />
-      <div>numbers.</div>
+      <div>numbers at</div>
+      <input
+        className="number number--config"
+        disabled={context.sorting}
+        min="1"
+        onChange={context.onChangeSpeed}
+        step="1"
+        style={{ width: `${("" + context.speed).length * 17}px` }}
+        type="number"
+        value={context.speed}
+      />
+      <div>x speed.</div>
     </div>
   );
 };
