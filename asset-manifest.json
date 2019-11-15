@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/searching-algorithms-examples/static/css/main.854f9f1b.chunk.css",
+    "main.js": "/searching-algorithms-examples/static/js/main.a8967c8d.chunk.js",
+    "main.js.map": "/searching-algorithms-examples/static/js/main.a8967c8d.chunk.js.map",
+    "runtime-main.js": "/searching-algorithms-examples/static/js/runtime-main.08b281a7.js",
+    "runtime-main.js.map": "/searching-algorithms-examples/static/js/runtime-main.08b281a7.js.map",
+    "static/js/2.fb84079e.chunk.js": "/searching-algorithms-examples/static/js/2.fb84079e.chunk.js",
+    "static/js/2.fb84079e.chunk.js.map": "/searching-algorithms-examples/static/js/2.fb84079e.chunk.js.map",
+    "index.html": "/searching-algorithms-examples/index.html",
+    "precache-manifest.8d5c1c2751126c1bb12f9c09b0542bb5.js": "/searching-algorithms-examples/precache-manifest.8d5c1c2751126c1bb12f9c09b0542bb5.js",
+    "service-worker.js": "/searching-algorithms-examples/service-worker.js",
+    "static/css/main.854f9f1b.chunk.css.map": "/searching-algorithms-examples/static/css/main.854f9f1b.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.08b281a7.js",
+    "static/js/2.fb84079e.chunk.js",
+    "static/css/main.854f9f1b.chunk.css",
+    "static/js/main.a8967c8d.chunk.js"
+  ]
+}
