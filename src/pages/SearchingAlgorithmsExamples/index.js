@@ -1,6 +1,6 @@
 import React from "react";
 import NumbersContainer from "../../components/NumbersContainer";
-// import ButtonsContainer from "../../components/ButtonsContainer";
+import ButtonsContainer from "../../components/ButtonsContainer";
 import ConfigurationContainer from "../../components/ConfigurationContainer";
 import { NumbersStore } from "../../contexts/NumbersContext";
 
@@ -11,6 +11,7 @@ const SearchingAlgorithmsExample = () => {
         <h1>Searching Algorithms Examples</h1>
         <ConfigurationContainer />
         <NumbersContainer />
+        <ButtonsContainer />
       </div>
     </NumbersStore>
   );
