@@ -1,18 +1,18 @@
 import React from "react";
-import DataContainer from "../../components/DataContainer";
+import NumbersContainer from "../../components/NumbersContainer";
 // import ButtonsContainer from "../../components/ButtonsContainer";
 import ConfigurationContainer from "../../components/ConfigurationContainer";
-import { DataStore } from "../../contexts/DataContext";
+import { NumbersStore } from "../../contexts/NumbersContext";
 
 const SearchingAlgorithmsExample = () => {
   return (
-    <DataStore>
+    <NumbersStore>
       <div className="page-container">
         <h1>Searching Algorithms Examples</h1>
         <ConfigurationContainer />
-        <DataContainer />
+        <NumbersContainer />
       </div>
-    </DataStore>
+    </NumbersStore>
   );
 };
 

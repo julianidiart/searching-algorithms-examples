@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
-import DataContext from "../../contexts/DataContext";
+import NumbersContext from "../../contexts/NumbersContext";
 
-const DataContainer = () => {
-  const context = useContext(DataContext);
+const NumbersContainer = () => {
+  const context = useContext(NumbersContext);
   const reorder = (list, startIndex, endIndex) => {
     const result = Array.from(list);
     const [removed] = result.splice(startIndex, 1);
@@ -15,12 +15,12 @@ const DataContainer = () => {
     if (!result.destination) return;
 
     const items = reorder(
-      context.data,
+      context.numbers,
       result.source.index,
       result.destination.index
     );
 
-    context.setData(items);
+    context.setNumbers(items);
   };
   return (
     <>
@@ -28,25 +28,31 @@ const DataContainer = () => {
         <Droppable droppableId="droppable" direction="horizontal">
           {provided => (
             <div
-              className="data-container"
+              className="numbers-container"
               ref={provided.innerRef}
               {...provided.droppableProps}
             >
-              {context.data.map((item, index) => (
-                <Draggable key={item.id} draggableId={item.id} index={index}>
+              {context.numbers.map((number, index) => (
+                <Draggable
+                  key={number.id}
+                  draggableId={number.id}
+                  index={index}
+                >
                   {(provided, snapshot) => (
                     <div
                       ref={provided.innerRef}
                       {...provided.draggableProps}
                       {...provided.dragHandleProps}
-                      className={item.classes}
+                      className={number.classes}
                     >
                       <div
                         className={
-                          snapshot.isDragging ? "item item--dragging" : "item"
+                          snapshot.isDragging
+                            ? "number number--dragging"
+                            : "number"
                         }
                       >
-                        {item.value}
+                        {number.value}
                       </div>
                     </div>
                   )}
@@ -61,4 +67,4 @@ const DataContainer = () => {
   );
 };
 
-export default DataContainer;
+export default NumbersContainer;

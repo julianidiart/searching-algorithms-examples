@@ -1,8 +1,8 @@
 import React, { createContext, useState, useEffect } from "react";
 
 const Context = createContext([]);
-export const DataStore = props => {
-  const [data, setData] = useState([]);
+export const NumbersStore = props => {
+  const [numbers, setNumbers] = useState([]);
   const [quantity, setQuantity] = useState(10);
   const [valueToSearch, setValueToSearch] = useState(10);
   useEffect(() => {
@@ -18,7 +18,7 @@ export const DataStore = props => {
         classes: ""
       });
     }
-    setData(numbersArray);
+    setNumbers(numbersArray);
   };
   const uniqueID = () => {
     function chr4() {
@@ -59,11 +59,11 @@ export const DataStore = props => {
   return (
     <Context.Provider
       value={{
-        data,
+        numbers,
         onChangeQuantity,
         onChangeValueToSearch,
         quantity,
-        setData,
+        setNumbers,
         valueToSearch
       }}
     >

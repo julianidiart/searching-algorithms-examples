@@ -1,8 +1,8 @@
-.data-container--dragging:last-child {
+.numbers-container--dragging:last-child {
   border-right: 0;
 }
 
-.item {
+.number {
   background-color: $secondary-color;
   border: 2px solid $primary-color;
   margin: 1px;
@@ -12,13 +12,13 @@
   width: auto;
 }
 
-.item--dragging {
+.number--dragging {
   background: lighten($secondary-color, 10%);
   border: 2px dashed $tertiary-color !important;
   color: $tertiary-color;
 }
 
-.item--config {
+.number--config {
   background: none;
   border: 0;
   color: $primary-color;

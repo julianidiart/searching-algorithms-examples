@@ -1,13 +1,13 @@
 import React, { useContext } from "react";
-import DataContext from "../../contexts/DataContext";
+import NumbersContext from "../../contexts/NumbersContext";
 
 const ConfigurationContainer = () => {
-  const context = useContext(DataContext);
+  const context = useContext(NumbersContext);
   return (
     <div className="buttons-container buttons-container--configuration">
       <div>Searching for the number</div>
       <input
-        className="item"
+        className="number"
         max="99"
         min="0"
         onChange={context.onChangeValueToSearch}
@@ -18,7 +18,7 @@ const ConfigurationContainer = () => {
       />
       <div>in</div>
       <input
-        className="item item--config"
+        className="number number--config"
         max="99"
         min="2"
         onChange={context.onChangeQuantity}
