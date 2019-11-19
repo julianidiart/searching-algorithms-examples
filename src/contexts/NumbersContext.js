@@ -2,6 +2,7 @@ import React, { createContext, useState, useEffect } from "react";
 import { uniqueID, getRandomNumber } from "../utils";
 import linearSearch from "../searchingAlgorithms/linearSearch";
 import binarySearch from "../searchingAlgorithms/binarySearch";
+import jumpSearch from "../searchingAlgorithms/jumpSearch";
 
 const Context = createContext([]);
 export const NumbersStore = props => {
@@ -52,8 +53,11 @@ export const NumbersStore = props => {
   };
   const handleBinarySearch = () => {
     const binarySearchAnimations = binarySearch(numbers, valueToSearch);
-    console.log(binarySearchAnimations);
     performAnimations(binarySearchAnimations);
+  };
+  const handleJumpSearch = () => {
+    const jumpSearchAnimations = jumpSearch(numbers, valueToSearch);
+    performAnimations(jumpSearchAnimations);
   };
   const performAnimations = animations => {
     setSearching(true);
@@ -82,6 +86,7 @@ export const NumbersStore = props => {
       value={{
         generateRandomNumbers,
         handleBinarySearch,
+        handleJumpSearch,
         handleLinearSearch,
         handleSort,
         numbers,

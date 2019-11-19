@@ -4,6 +4,7 @@ import NumbersContext from "../../contexts/NumbersContext";
 const SearchingButtonsContainer = () => {
   const {
     handleBinarySearch,
+    handleJumpSearch,
     handleLinearSearch,
     searching,
     sorted
@@ -24,6 +25,13 @@ const SearchingButtonsContainer = () => {
           disabled={!sorted || searching}
         >
           Binary search
+        </button>
+        <button
+          className="button"
+          onClick={handleJumpSearch}
+          disabled={!sorted || searching}
+        >
+          Jump search
         </button>
       </div>
     </>
